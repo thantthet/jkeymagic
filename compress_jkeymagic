@@ -1,0 +1,13 @@
+#!/bin/bash
+cd `dirname $0`
+
+java -jar ./Closure/compiler.jar --compilation_level SIMPLE_OPTIMIZATIONS --js ./types.js --js ./jkeymagic.js --js ./jkeymagic.keyboard.js --js ./jkeymagic.menu.js --js ./jkeymagic.engine.js --js ./jkeymagic.engine.inputProcessor.js --js_output_file ./min/jkeymagic.js
+echo "
+/*
+ * jKeyMagic
+ * http://code.google.com/p/keymagic
+ *
+ * Copyright 2011, Thant Thet Khin Zaw
+ * Licensed under GPL Version 2 license.
+ *
+ */" >> ./min/jkeymagic.js
